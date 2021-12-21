@@ -1,4 +1,8 @@
+scipy
 plotly
-pandas
+pandas 
 numpy
+matplotlib
 seaborn
+sklearn
+streamlit
