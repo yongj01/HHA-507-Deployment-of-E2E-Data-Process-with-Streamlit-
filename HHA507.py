@@ -46,12 +46,12 @@ st.dataframe(df_hospital)
 
 # Quickly creating a pivot table 
 st.subheader('Hospital Data Pivot Table')
-dataframe_pivot = df_hospital_2.pivot_table(index=['state','city'],values=['effectiveness_of_care_national_comparison_footnote'],aggfunc='mean')
+dataframe_pivot = df_hospital.pivot_table(index=['state','city'],values=['effectiveness_of_care_national_comparison_footnote'],aggfunc='mean')
 st.dataframe(dataframe_pivot)
 
 
 
-hospitals_ny = df_hospital_2[df_hospital_2['state'] == 'NY']
+hospitals_ny = df_hospital[df_hospital['state'] == 'NY']
 
 
 #Bar Chart
