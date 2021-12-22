@@ -35,9 +35,9 @@ st.write('This app is providing answers to the following questions:')
 st.write('1. How does Stony Brooks hospital type compare to the rest of New York?')
 st.write('2. Which DRG code has the highest total discharges for New York?')
 st.write('3. Which APC code has the largest number of services for New York?')
-st.write('4. Which state has the most hospitals?')
-st.write('5. Which outpatient provider has the highest total average payments?')
-st.write('6. Which inpatient provider has the highest number of discharges?')
+st.write('4. Where are most hospitals in NY state located geographically?')
+st.write('5. Which type of hospital make up most of the hospitals in NY state?')
+st.write('6. Which hospital (provider) has the most number of average total payments?')
   
 
 # Preview the dataframes 
