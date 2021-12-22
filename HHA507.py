@@ -15,43 +15,35 @@ import plotly.graph_objects as go
 import time
 
 
-
 df_hospital = pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_DataSci_507/main/Deployment_Streamlit/output/df_hospital_2.csv')
 
 df_inpatient = pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_DataSci_507/main/Deployment_Streamlit/inpatient_2015.csv')
 
 df_outpatient = pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_DataSci_507/main/Deployment_Streamlit/outpatient_2015.csv')
 
-df_hospital_2 = pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_STATS_507/main/Week13_Summary/output/df_hospital_2.csv')
- 
-df_hospital_2
-
-df_inpatient_2 = pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_STATS_507/main/Week13_Summary/output/df_inpatient_2.csv')
-    
-df_outpatient_2 = pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_STATS_507/main/Week13_Summary/output/df_outpatient_2.csv')
-
-
-
-st.title('Medicare — Expenses - NY / NY State')
-
-
-
-    
     
 # FAKE LOADER BAR TO STIMULATE LOADING    
 # my_bar = st.progress(0)
 # for percent_complete in range(100):
 #     time.sleep(0.1)
 #     my_bar.progress(percent_complete + 1)
-  
 
-st.write('Hello, *World!* :sunglasses:') 
+
+st.title('HHA 507 - Final Assignment')
+st.write('Jeremy Yong :sunglasses:') 
+st.write('This app is providing answers to the following questions:')
+st.write('1. How does Stony Brooks hospital type compare to the rest of New York?')
+st.write('2. Which DRG code has the highest total discharges for New York?')
+st.write('3. Which APC code has the largest number of services for New York?')
+st.write('4. Which state has the most hospitals?')
+st.write('5. Which outpatient provider has the highest total average payments?')
+st.write('6. Which inpatient provider has the highest number of discharges?')
   
+ 
 # Load the data:     
 df_hospital_2 = load_hospitals()
 df_inpatient_2 = load_inatpatient()
 df_outpatient_2 = load_outpatient()
-
 
 
 # Preview the dataframes 
