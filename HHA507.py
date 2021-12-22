@@ -39,16 +39,10 @@ st.write('4. Which state has the most hospitals?')
 st.write('5. Which outpatient provider has the highest total average payments?')
 st.write('6. Which inpatient provider has the highest number of discharges?')
   
- 
-# Load the data:     
-df_hospital_2 = load_hospitals()
-df_inpatient_2 = load_inatpatient()
-df_outpatient_2 = load_outpatient()
-
 
 # Preview the dataframes 
 st.header('Hospital Data Preview')
-st.dataframe(df_hospital_2)
+st.dataframe(df_hospital)
 
 # Quickly creating a pivot table 
 st.subheader('Hospital Data Pivot Table')
