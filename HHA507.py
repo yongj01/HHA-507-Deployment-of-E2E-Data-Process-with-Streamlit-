@@ -107,9 +107,6 @@ common_discharges = common_discharges.sort_values(['total_discharges'], ascendin
 top10 = common_discharges.head(10)
 bottom10 = common_discharges.tail(10)
 
-
-
-
 st.header("Top 10 DRGs")
 st.dataframe(top10)
 
