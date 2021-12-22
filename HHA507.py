@@ -44,12 +44,11 @@ st.write('6. Which inpatient provider has the highest number of discharges?')
 st.header('Hospital Data Preview')
 st.dataframe(df_hospital)
 
+
 # Quickly creating a pivot table 
 st.subheader('Hospital Data Pivot Table')
 dataframe_pivot = df_hospital.pivot_table(index=['state','city'],values=['effectiveness_of_care_national_comparison_footnote'],aggfunc='mean')
 st.dataframe(dataframe_pivot)
-
-
 
 hospitals_ny = df_hospital[df_hospital['state'] == 'NY']
 
@@ -93,15 +92,11 @@ st.markdown('Based on this above bar chart, we can see the majority of hospitals
 #Drill down into INPATIENT and OUTPATIENT just for NY 
 st.title('Drill Down into INPATIENT data')
 
-
-inpatient_ny = df_inpatient_2[df_inpatient_2['provider_state'] == 'NY']
+inpatient_ny = df_inpatient[df_inpatient['provider_state'] == 'NY']
 total_inpatient_count = sum(inpatient_ny['total_discharges'])
 
 st.header('Total Count of Discharges from Inpatient Captured: ' )
 st.header( str(total_inpatient_count) )
-
-
-
 
 
 ##Common D/C 
