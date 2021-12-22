@@ -113,14 +113,6 @@ st.header('DRGs')
 st.dataframe(common_discharges)
 
 
-col1, col2 = st.beta_columns(2)
-
-col1.header('Top 10 DRGs')
-col1.dataframe(top10)
-
-col2.header('Bottom 10 DRGs')
-col2.dataframe(bottom10)
-
 col1, col2 = st.columns(2)
 
 with col1:
