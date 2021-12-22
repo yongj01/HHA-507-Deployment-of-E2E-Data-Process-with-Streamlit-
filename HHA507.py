@@ -121,7 +121,15 @@ col1.dataframe(top10)
 col2.header('Bottom 10 DRGs')
 col2.dataframe(bottom10)
 
+col1, col2 = st.columns(2)
 
+with col1:
+    st.header("Top 10 DRGs")
+    st.dataframe(top10)
+
+with col2:
+    st.header("Bottom 10 DRGs")
+    st.dataframe(bottom10)
 
 
 #Bar Charts of the costs 
