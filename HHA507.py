@@ -102,26 +102,19 @@ st.header( str(total_inpatient_count) )
 ##Common D/C 
 
 common_discharges = inpatient_ny.groupby('drg_definition')['total_discharges'].sum().reset_index()
-
+common_discharges = common_discharges.sort_values(['total_discharges'], ascending=False)
 
 top10 = common_discharges.head(10)
 bottom10 = common_discharges.tail(10)
 
 
 
-st.header('DRGs')
-st.dataframe(common_discharges)
 
+st.header("Top 10 DRGs")
+st.dataframe(top10)
 
-col1, col2 = st.columns(2)
-
-with col1:
-    st.header("Top 10 DRGs")
-    st.dataframe(top10)
-
-with col2:
-    st.header("Bottom 10 DRGs")
-    st.dataframe(bottom10)
+st.header("Bottom 10 DRGs")
+st.dataframe(bottom10)
 
 
 #Bar Charts of the costs 
