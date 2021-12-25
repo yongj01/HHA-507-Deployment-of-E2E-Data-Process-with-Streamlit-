@@ -59,6 +59,13 @@ st.write('6. Which hospital (provider) has the most number of average total paym
 st.header('Hospital Data Preview')
 st.dataframe(df_hospital)
 
+st.header('Hospital Data Preview')
+st.dataframe(df_inpatient)
+
+st.header('Hospital Data Preview')
+st.dataframe(df_outpatient)
+
+
 
 # Quickly creating a pivot table 
 st.subheader('Hospital Data Pivot Table')
