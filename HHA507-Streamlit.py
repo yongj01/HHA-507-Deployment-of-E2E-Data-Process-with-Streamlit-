@@ -73,6 +73,12 @@ st.dataframe(dataframe_pivot)
 
 hospitals_ny = df_hospital[df_hospital['state'] == 'NY']
 
+# Stony Brook University Hospital
+SBUH = df_hospital[df_hospital['hospital_name'] == 'SUNY/STONY BROOK UNIVERSITY HOSPITAL']
+st.header('Stony Brook University Hospital')
+st.markdown('Stony Brook University Hospital Dataset')
+st.dataframe(SBUH)
+
 
 #Bar Chart
 st.subheader('Hospital Type - NY')
