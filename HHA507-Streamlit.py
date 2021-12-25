@@ -14,6 +14,21 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import time
 
+@st.cache
+def load_hospitals():
+   df_hospital = pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_DataSci_507/main/Deployment_Streamlit/hospital_info.csv')
+   return df_hospital
+
+@st.cache
+def load_inpatient():
+    df_inpatient = pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_DataSci_507/main/Deployment_Streamlit/inpatient_2015.csv')
+    return df_inpatient
+
+@st.cache
+def load_outpatient():
+    df_outpatient = pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_DataSci_507/main/Deployment_Streamlit/outpatient_2015.csv')
+    return df_outpatient
+
 
 df_hospital = pd.read_csv('https://raw.githubusercontent.com/hantswilliams/AHI_DataSci_507/main/Deployment_Streamlit/output/df_hospital_2.csv')
 
