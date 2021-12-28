@@ -131,11 +131,14 @@ st.header( str(total_inpatient_count) )
 
 outpatient_ny = df_outpatient[df_outpatient['provider_state'] == 'NY']
 outpatient_discharges = df_outpatient.groupby('apc')['outpatient_services'].sum().reset_index()
+
 st.header('Outpatient Services for New York')
 st.markdown('This dataset shows the number of outpatient services per apc code for New York state.')
 st.dataframe(outpatient_discharges)
 
 topDRG = outpatient_discharges.head(10)
+
+st.dataframe(topDRG)
 
 #Question 3:
 st.markdown('The APC with the largest number of services for NY is 0634 - Hospital Clinic Visits.')
