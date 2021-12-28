@@ -118,13 +118,19 @@ st.markdown('Based on this above bar chart, we can see the majority of hospitals
 
 
 #Drill down into INPATIENT and OUTPATIENT just for NY 
-st.title('Drill Down into INPATIENT data')
+st.title('Looking into INPATIENT data')
 
 inpatient_ny = df_inpatient[df_inpatient['provider_state'] == 'NY']
 total_inpatient_count = sum(inpatient_ny['total_discharges'])
 
 st.header('Total Count of Discharges from Inpatient Captured: ' )
 st.header( str(total_inpatient_count) )
+
+outpatient_ny = df_outpatient[df_outpatient['provider_state'] == 'NY']
+outpatient_discharges = df_outpatient.groupby('apc')['outpatient_services'].sum().reset_index()
+st.header('Outpatient Services for New York')
+st.markdown('This dataset shows the number of outpatient services per apc code for New York state.')
+st.dataframe(outpatient_discharges)
 
 
 ##Common D/C 
