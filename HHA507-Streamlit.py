@@ -86,7 +86,7 @@ bar1 = hospitals_ny['hospital_type'].value_counts().reset_index()
 st.dataframe(bar1)
 
 #Question 1:
-st.markdown('The majority of hospitals in NY are acute care, which included Stony Brook University Hospital, followed by psychiatric')
+st.markdown('The majority of hospitals in NY are acute care, which includes Stony Brook University Hospital, followed by psychiatric')
 
 
 st.subheader('With a PIE Chart:')
@@ -137,6 +137,9 @@ bottom10 = common_discharges.tail(10)
 
 st.header("Top 10 DRGs")
 st.dataframe(top10)
+
+#Question 2:
+st.markdown('The DRG with the highest number of discharges is 871 - SEPTICEMIA OR SEVERE SEPSIS W/O MV 96+ HOURS W MCC')
 
 st.header("Bottom 10 DRGs")
 st.dataframe(bottom10)
