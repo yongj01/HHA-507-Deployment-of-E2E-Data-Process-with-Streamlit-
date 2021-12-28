@@ -134,6 +134,9 @@ st.dataframe(outpatient_discharges)
 
 topDRG = outpatient_discharges.head(10)
 
+#Question 3:
+st.markdown('The APC with the largest number of services for NY is 0634 - Hospital Clinic Visits.')
+
 
 ##Common D/C 
 
