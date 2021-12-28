@@ -136,9 +136,11 @@ st.header('Outpatient Services for New York')
 st.markdown('This dataset shows the number of outpatient services per apc code for New York state.')
 st.dataframe(outpatient_discharges)
 
-topDRG = outpatient_discharges.head(10)
+outpatient_discharges = df_outpatient.sort_values(['outpatient_services'], ascending=False)
+topAPC = outpatient_discharges.head(10)
 
-st.dataframe(topDRG)
+st.header("Top 10 APCs")
+st.dataframe(topAPC)
 
 #Question 3:
 st.markdown('The APC with the largest number of services for NY is 0634 - Hospital Clinic Visits.')
