@@ -85,7 +85,8 @@ st.subheader('Hospital Type - NY')
 bar1 = hospitals_ny['hospital_type'].value_counts().reset_index()
 st.dataframe(bar1)
 
-st.markdown('The majority of hospitals in NY are acute care, followed by psychiatric')
+#Question 1:
+st.markdown('The majority of hospitals in NY are acute care, which included Stony Brook University Hospital, followed by psychiatric')
 
 
 st.subheader('With a PIE Chart:')
