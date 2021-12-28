@@ -136,6 +136,7 @@ st.header('Outpatient Services for New York')
 st.markdown('This dataset shows the number of outpatient services per apc code for New York state.')
 st.dataframe(outpatient_discharges)
 
+##Sorting outpatient_discharges by top APC codes in descending order
 outpatient_discharges = outpatient_discharges.sort_values(['outpatient_services'], ascending=False)
 topAPC = outpatient_discharges.head(10)
 
@@ -147,6 +148,8 @@ st.markdown('The APC with the largest number of services for NY is 0634 - Hospit
 
 
 ##Common D/C 
+
+##Sorting common_discharges by top APC codes in descending order
 
 common_discharges = inpatient_ny.groupby('drg_definition')['total_discharges'].sum().reset_index()
 common_discharges = common_discharges.sort_values(['total_discharges'], ascending=False)
