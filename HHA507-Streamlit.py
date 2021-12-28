@@ -105,6 +105,9 @@ hospitals_ny_gps['lat'] = pd.to_numeric(hospitals_ny_gps['lat'])
 
 st.map(hospitals_ny_gps)
 
+#Question 4:
+st.markdown('Most hospitals in New York State are located in New York City.')
+
 
 #Timeliness of Care
 st.subheader('NY Hospitals - Timelieness of Care')
