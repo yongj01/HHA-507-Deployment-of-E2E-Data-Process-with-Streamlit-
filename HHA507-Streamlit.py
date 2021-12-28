@@ -180,6 +180,9 @@ st.plotly_chart(bar3)
 st.header("Hospital - ")
 st.dataframe(costs_sum)
 
+#Question 6:
+st.markdown('New York Presbyterian Hospital has the most number of average total payments.')
+
 
 #Costs by Condition and Hospital / Average Total Payments
 costs_condition_hospital = inpatient_ny.groupby(['provider_name', 'drg_definition'])['average_total_payments'].sum().reset_index()
