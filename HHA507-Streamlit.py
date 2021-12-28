@@ -108,9 +108,16 @@ st.map(hospitals_ny_gps)
 #Question 4:
 st.markdown('Most hospitals in New York State are located in New York City.')
 
+##Hospitals in CA State
+
+hospitals_ca = df_hospital[df_hospital['state'] == 'CA']
+st.subheader('Hospital Type - CA')
+bar2 = hospitals_ca['hospital_type'].value_counts().reset_index()
+st.dataframe(bar2)
+
 
 #Timeliness of Care
-st.subheader('NY Hospitals - Timelieness of Care')
+st.subheader('NY Hospitals - Timeliness of Care')
 bar2 = hospitals_ny['timeliness_of_care_national_comparison'].value_counts().reset_index()
 fig2 = px.bar(bar2, x='index', y='timeliness_of_care_national_comparison')
 st.plotly_chart(fig2)
