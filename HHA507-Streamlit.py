@@ -51,7 +51,7 @@ st.write('1. How does Stony Brooks hospital type compare to the rest of New York
 st.write('2. Which DRG code has the highest total discharges for New York?')
 st.write('3. Which APC code has the largest number of services for New York?')
 st.write('4. Where are most hospitals in NY state located geographically?')
-st.write('5. Which type of hospital make up most of the hospitals in NY state?')
+st.write('5. Which type of hospital make up most of the hospitals in California state?')
 st.write('6. Which hospital (provider) has the most number of average total payments?')
   
 
@@ -115,6 +115,8 @@ st.subheader('Hospital Type - CA')
 bar2 = hospitals_ca['hospital_type'].value_counts().reset_index()
 st.dataframe(bar2)
 
+#Question 5:
+st.markdown('The majority of hospitals in CA are acute care, followed by psychiatric')
 
 #Timeliness of Care
 st.subheader('NY Hospitals - Timeliness of Care')
